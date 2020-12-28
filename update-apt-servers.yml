@@ -1,4 +1,4 @@
-- hosts: UCS-Server
+- hosts: all
   tasks:
    - name: updates a server
      apt: update_cache=yes
