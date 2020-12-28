@@ -1,0 +1,1 @@
+ansible-playbook --user=ansman -vvv ansible-playbook-test.yml
