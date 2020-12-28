@@ -1,5 +1,5 @@
 - hosts: UCS-Server
-  sudo: true
+  sudo: false
   tasks:
    - name: updates a server
      apt: update_cache=yes
