@@ -1,1 +1,7 @@
-ansible-playbook --user=ansman -vvv ansible-playbook-test.yml
+- hosts: all
+  tasks:
+    - name: test connection
+      ping:
+      remote_user: ansman
+      vars:
+        ansible_ssh_extra_args: '-K -o ControlPath=none'
