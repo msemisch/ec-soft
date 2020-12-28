@@ -1,0 +1,9 @@
+- hosts: all
+  gather_facts: False
+  connection: local
+
+  tasks:
+
+    - name: ping
+      shell: ping -c 1 -w 2 8.8.8.8
+      ignore_errors: true
