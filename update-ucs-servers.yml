@@ -1,0 +1,12 @@
+- hosts: all
+  tasks:
+   - name: updates a server
+     apt: update_cache=yes
+   - name: upgrade a server
+     apt: upgrade=full
+   - name: Check if a reboot is required
+     register: file
+     stat: path=/var/run/reboot-required get_md5=no
+   - name: Reboot the server
+     command: /sbin/reboot
+     when: file.stat.exists == true
